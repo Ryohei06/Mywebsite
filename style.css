@@ -1,0 +1,210 @@
+/* style.css for index.html */
+
+body {
+  background: #f9f9f9;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  color: #333333;
+  scroll-behavior: smooth;
+}
+
+/* HEADER */
+
+.profile-header {
+  background: linear-gradient(135deg, #2C3E50, #1A252F);
+  color: #f5f5f5;
+  padding: 2.5rem 1rem;
+  text-align: center;
+}
+
+/* PROFILE CARD */
+
+.profile-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px; /* Increased max-width */
+  width: 95%; /* Utilize available space */
+  margin: 2rem auto;
+  padding: 2rem;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+/* PROFILE IMAGE */
+
+.profile-img {
+  width: 250px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0;
+  background: transparent;
+  filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.25));
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+/* PROFILE INFO */
+
+.profile-info {
+  flex: 1; /* Take up remaining space */
+  min-width: 280px;
+}
+
+.profile-info h1 {
+  font-size: 2.5rem;
+  margin: 0.5rem 0;
+  font-weight: 700;
+}
+
+.profile-info .desc {
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  margin-bottom: 1rem;
+}
+
+/* CALL TO ACTION BUTTON */
+
+.profile-info .cta-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #3498DB;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.profile-info .cta-btn:hover {
+  background-color: #2980B9;
+}
+
+/* NAVIGATION */
+
+nav {
+  margin-top: 1.5rem;
+}
+
+nav a {
+  color: #61dafb;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #3498DB;
+  transition: width 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: #3498DB;
+}
+
+nav a:hover::after,
+nav a.active::after {
+  width: 100%;
+}
+
+/* MAIN SECTIONS */
+
+section {
+  padding: 2rem;
+  max-width: 1200px;
+  width: 95%;
+  margin: auto;
+}
+
+h2 {
+  color: #20232a;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  color: #3498DB;
+  margin-bottom: 0.1rem;
+}
+
+
+ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+}
+
+/* FOOTER */
+
+footer {
+  background: #20232a;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+  .profile-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-img {
+    width: 200px;
+  }
+
+  .profile-info {
+    max-width: 100%;
+  }
+
+  .profile-info h1 {
+    font-size: 2rem;
+  }
+
+  .profile-info .desc {
+    font-size: 1rem;
+  }
+}
+
+/* SKILLS SECTION - Multi-Column Layout */
+.skills-list {
+  display: block;
+  column-count: 3;
+  column-gap: 40px;
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.skills-list li {
+  break-inside: avoid; /* Prevent breaking items across columns */
+  margin-bottom: 0.5rem;
+}
+
+#contact i {
+  margin-right: 8px;
+  color: #555; /* Subtle gray for minimal look */
+  font-size: 1rem;
+  vertical-align: middle;
+}
+
+#contact a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#contact a:hover {
+  color: #3498db; /* Subtle hover effect */
+}
